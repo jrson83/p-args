@@ -7,7 +7,7 @@ import type {
   ParseArgsArgumentsConfig,
   ParseArgsOptionsConfig,
 } from './types'
-import { debug, isCodeError, printHelp } from './utils'
+import { debug, isCodeError, parsePositionals, printHelp } from './utils'
 
 /**
  * Builds and returns a command with specified configuration.
@@ -142,47 +142,22 @@ export const build = <
           const { values: resolvedOptions, positionals: resolvedPositionals } =
             parseArgs(config)
 
-          debug('Resolved options "%s".', resolvedOptions)
           debug('Resolved arguments "%s".', resolvedPositionals)
+          debug('Resolved options "%s".', resolvedOptions)
 
-          // todo: externalize as standalone function
-          const resolvedArgs: {
-            [name: string]: string | string[] | undefined
-          } = {}
-
-          if (Object.keys(resolvedCommand.arguments!).length) {
-            debug('Parsing arguments "%s".', resolvedPositionals)
-
-            for (const [name, arg] of Object.entries(
-              resolvedCommand.arguments!
-            )) {
-              if (!arg.multiple) {
-                const value = resolvedPositionals.pop()
-
-                if ((!value && arg.required) || name === value) {
-                  throw new Error(`Expected required argument: ${name}`)
-                }
-
-                resolvedArgs[name] ??= value
-              } else {
-                const argIndex = resolvedPositionals.findIndex(
-                  (p) => p === name
-                )
-                const values = resolvedPositionals.slice(argIndex + 1)
-
-                resolvedArgs[name] ??= values
-              }
-            }
-          }
+          const resolvedArgs = parsePositionals(
+            resolvedCommand,
+            resolvedPositionals
+          )
 
           debug(
             'Running action-handler with resolved arguments "%s" and options "%s".',
-            resolvedArgs,
+            resolvedPositionals,
             resolvedOptions
           )
 
           if (typeof resolvedCommand.handler === 'function') {
-            // in your face
+            // @ts in-your-face
             resolvedCommand.handler(resolvedArgs, resolvedOptions)
           }
 
