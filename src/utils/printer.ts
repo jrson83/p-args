@@ -27,7 +27,7 @@ export function printHelp(cmd: Required<Command>, subCommand?: string): string {
     [
       ...Object.keys(command.arguments),
       ...Object.keys(command.options),
-      ...Object.keys(command.commands),
+      ...command.commands.map(({ name }) => name),
     ].reduce((max, opt) => Math.max(max, opt.length), 0)
 
   lines.push(`Usage: ${command.name} [${subCommand || 'command'}] [options]`)
