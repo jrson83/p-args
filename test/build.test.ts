@@ -28,7 +28,7 @@ describe('build', () => {
     strictEqual(info.mock.calls[0]?.arguments[0], 'my-cli/v0.1.0')
   })
 
-  it('should output program help', async (ctx) => {
+  it('should output program help usage without arguments or options', async (ctx) => {
     const info = ctx.mock.method(global.console, 'info', async () => {
       return
     })
@@ -42,7 +42,7 @@ describe('build', () => {
     strictEqual(info.mock.callCount(), 1)
     strictEqual(
       info.mock.calls[0]?.arguments[0],
-      `Usage: ${defaultProgramProps.name} [command] [options]\n\n${defaultProgramProps.description}`
+      `Usage: ${defaultProgramProps.name} \n\n${defaultProgramProps.description}`
     )
   })
 })
