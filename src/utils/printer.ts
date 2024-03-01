@@ -26,36 +26,44 @@ export function printHelp(
   const {
     name,
     description,
-    arguments: cmdArgs,
+    arguments: args,
     examples,
     options,
     commands,
   } = resolvedCommand
 
-  const cmdArgKeys = Object.keys(cmdArgs)
+  const argKeys = Object.keys(args)
   const optionKeys = Object.keys(options)
   const commandKeys = commands.map(({ name }) => name)
+
+  const hasArg = argKeys.length !== 0
+  const hasOption = optionKeys.length !== 0
+  const hasCommand = commands.length !== 0
 
   /**
    * Returns the `maxlength` of the longest arg, opt & cmd string literal key + 8.
    */
   const maxLength =
     8 +
-    [...cmdArgKeys, ...optionKeys, ...commandKeys].reduce(
+    [...argKeys, ...optionKeys, ...commandKeys].reduce(
       (max, opt) => Math.max(max, opt.length),
       0
     )
 
-  lines.push(`Usage: ${name} [${subCommand || 'command'}] [options]`)
+  lines.push(
+    `Usage: ${name} ${
+      subCommand ? `[${subCommand}] ` : hasCommand ? `[command] ` : ''
+    }${hasOption ? `[options]` : ''}`
+  )
 
   if (description) {
     lines.push('', description)
   }
 
-  if (cmdArgKeys.length !== 0) {
+  if (hasArg) {
     lines.push('', 'Arguments:')
 
-    for (const [name, arg] of Object.entries(cmdArgs)) {
+    for (const [name, arg] of Object.entries(args)) {
       const { description, default: defaultValue } = arg
 
       const leftColumn = `${indent}${name}`
@@ -68,7 +76,7 @@ export function printHelp(
     }
   }
 
-  if (optionKeys.length !== 0) {
+  if (hasOption) {
     lines.push('', 'Options:')
 
     for (const [name, opt] of Object.entries(options)) {
@@ -86,7 +94,7 @@ export function printHelp(
     }
   }
 
-  if (commands.length !== 0) {
+  if (hasCommand) {
     lines.push('', 'Commands:')
 
     for (const subCmd of commands) {
