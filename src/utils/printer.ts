@@ -3,7 +3,7 @@ import type { Command } from '../types'
 /**
  * Prints the help information for the specified command and, optionally, a sub-command.
  *
- * @param {Required<Command>} command - The command for which to print help information.
+ * @param {Required<Command>} cmd - The command for which to print help information.
  * @param {string | undefined} subCommand - The optional sub-command for which to print help information.
  * @returns {string} The formatted help information as a string.
  */
