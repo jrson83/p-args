@@ -13,8 +13,8 @@ export function printHelp(cmd: Required<Command>, subCommand?: string): string {
 
   let command = cmd
 
-  if (subCommand && cmd.commands?.length !== 0) {
-    command = cmd.commands?.find(
+  if (subCommand && cmd.commands.length !== 0) {
+    command = cmd.commands.find(
       ({ name }) => name === subCommand
     ) as Required<Command>
   }
@@ -70,7 +70,7 @@ export function printHelp(cmd: Required<Command>, subCommand?: string): string {
     }
   }
 
-  if (command.commands?.length) {
+  if (command.commands.length) {
     lines.push('', 'Commands:')
 
     for (const subCmd of command.commands) {
@@ -86,7 +86,7 @@ export function printHelp(cmd: Required<Command>, subCommand?: string): string {
     }
   }
 
-  if (command.examples?.length) {
+  if (command.examples.length) {
     lines.push('', 'Example:')
 
     for (const expl of command.examples) {
