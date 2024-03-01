@@ -14,7 +14,7 @@ export function printHelp(cmd: Required<Command>, subCommand?: string): string {
   let command = cmd
 
   if (subCommand && cmd.commands.length !== 0) {
-    command = cmd.commands.find(
+    command ??= cmd.commands.find(
       ({ name }) => name === subCommand
     ) as Required<Command>
   }
