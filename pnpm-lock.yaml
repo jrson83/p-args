@@ -23,13 +23,13 @@ devDependencies:
     version: 0.8.0
   pkgroll:
     specifier: ^2.0.2
-    version: 2.0.2(typescript@5.4.4)
+    version: 2.0.2(typescript@5.4.5)
   tsx:
     specifier: ^4.7.1
     version: 4.7.2
   typescript:
     specifier: ^5.4.2
-    version: 5.4.4
+    version: 5.4.5
 
 packages:
 
@@ -736,7 +736,7 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pkgroll@2.0.2(typescript@5.4.4):
+  /pkgroll@2.0.2(typescript@5.4.5):
     resolution: {integrity: sha512-gRQ293zs67H2nN/CKwdLnlxCKpE5qi5rJwVvDUqep8qOLs57PlTl3MAXmLlFztwI2Iv6mP9k5BSlhBjzFJmerg==}
     engines: {node: '>=18'}
     hasBin: true
@@ -756,7 +756,7 @@ packages:
       esbuild: 0.20.1
       magic-string: 0.30.8
       rollup: 4.12.1
-      typescript: 5.4.4
+      typescript: 5.4.5
     dev: true
 
   /resolve-pkg-maps@1.0.0:
@@ -816,8 +816,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /typescript@5.4.4:
-    resolution: {integrity: sha512-dGE2Vv8cpVvw28v8HCPqyb08EzbBURxDpuhJvTrusShUfGnhHBafDsLdS1EhhxyL6BJQE+2cT3dDPAv+MQ6oLw==}
+  /typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
