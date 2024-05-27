@@ -75,7 +75,7 @@
   "packageManager": "pnpm@9.0.6",
   "pnpm": {
     "overrides": {
-      "esbuild": "0.20.2",
+      "esbuild": "0.21.4",
       "typescript": "^5.4.2"
     }
   }
