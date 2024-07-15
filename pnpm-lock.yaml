@@ -29,7 +29,7 @@ importers:
         version: 2.1.1(typescript@5.4.5)
       tsx:
         specifier: ^4.7.1
-        version: 4.11.1
+        version: 4.16.2
       typescript:
         specifier: ^5.4.2
         version: 5.4.5
@@ -516,8 +516,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tsx@4.11.1:
-    resolution: {integrity: sha512-8ZmVC4OlQipEh3XBclB9YIih1XlNerBJ5NSwo5p76lIWIZdoSF+jFOVm9Gc/FQQ9554mZfxEEq9yTZfdghGYrw==}
+  tsx@4.16.2:
+    resolution: {integrity: sha512-C1uWweJDgdtX2x600HjaFaucXTilT7tgUZHbOE4+ypskZ1OP8CRCSDkCxG6Vya9EwaFIVagWwpaVAn5wzypaqQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -914,7 +914,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tsx@4.11.1:
+  tsx@4.16.2:
     dependencies:
       esbuild: 0.23.0
       get-tsconfig: 4.7.5
