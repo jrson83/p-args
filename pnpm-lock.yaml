@@ -20,7 +20,7 @@ importers:
         version: 20.14.13
       husky:
         specifier: ^9.0.11
-        version: 9.0.11
+        version: 9.1.3
       nano-staged:
         specifier: ^0.8.0
         version: 0.8.0
@@ -436,8 +436,8 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  husky@9.0.11:
-    resolution: {integrity: sha512-AB6lFlbwwyIqMdHYhwPe+kjOC3Oc5P3nThEoW/AaO2BX3vJDjWPFxYLxokUZOo6RNX20He3AaT8sESs9NJcmEw==}
+  husky@9.1.3:
+    resolution: {integrity: sha512-ET3TQmQgdIu0pt+jKkpo5oGyg/4MQZpG6xcam5J5JyNJV+CBT23OBpCF15bKHKycRyMH9k6ONy8g2HdGIsSkMQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -820,7 +820,7 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  husky@9.0.11: {}
+  husky@9.1.3: {}
 
   inflight@1.0.6:
     dependencies:
