@@ -26,13 +26,13 @@ importers:
         version: 0.8.0
       pkgroll:
         specifier: ^2.0.2
-        version: 2.5.1(typescript@5.6.3)
+        version: 2.5.1(typescript@5.7.2)
       tsx:
         specifier: ^4.7.1
         version: 4.19.2
       typescript:
         specifier: ^5.4.2
-        version: 5.6.3
+        version: 5.7.2
 
 packages:
 
@@ -610,8 +610,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1017,7 +1017,7 @@ snapshots:
 
   picomatch@4.0.2: {}
 
-  pkgroll@2.5.1(typescript@5.6.3):
+  pkgroll@2.5.1(typescript@5.7.2):
     dependencies:
       '@rollup/plugin-alias': 5.1.1(rollup@4.27.2)
       '@rollup/plugin-commonjs': 26.0.3(rollup@4.27.2)
@@ -1030,7 +1030,7 @@ snapshots:
       magic-string: 0.30.12
       rollup: 4.27.2
     optionalDependencies:
-      typescript: 5.6.3
+      typescript: 5.7.2
 
   resolve-pkg-maps@1.0.0: {}
 
@@ -1101,7 +1101,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  typescript@5.6.3: {}
+  typescript@5.7.2: {}
 
   undici-types@6.19.8: {}
 
