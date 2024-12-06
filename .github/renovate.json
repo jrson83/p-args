@@ -12,7 +12,7 @@
   "timezone": "Europe/Amsterdam",
   "enabledManagers": ["npm", "github-actions"],
   "addLabels": ["dependencies"],
-  "rangeStrategy": "update-lockfile",
+  "rangeStrategy": "bump",
   "automerge": true,
   "automergeType": "pr",
   "platformAutomerge": true,
@@ -22,14 +22,15 @@
   },
   "packageRules": [
     {
+      "description": "Don't bump engines field in package.json",
+      "matchPackageNames": ["node"],
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
+    {
       "description": "Automatically merge devDependencies updates",
       "matchDepTypes": ["devDependencies"],
-      "matchPackagePatterns": [
-        "@biomejs/biome",
-        "@types/node",
-        "nano-staged",
-        "tsx"
-      ],
       "automerge": true
     }
   ]
