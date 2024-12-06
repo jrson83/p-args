@@ -13,7 +13,7 @@
       "quoteStyle": "single",
       "quoteProperties": "asNeeded",
       "semicolons": "asNeeded",
-      "trailingComma": "es5"
+      "trailingCommas": "es5"
     }
   },
   "linter": {
@@ -26,9 +26,6 @@
       },
       "correctness": {
         "noVoidTypeReturn": "off"
-      },
-      "nursery": {
-        "useGroupedTypeImport": "error"
       },
       "suspicious": {
         "noExplicitAny": "off",
