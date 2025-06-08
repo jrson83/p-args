@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/node": "^22.15.29",
+    "@types/node": "^22.15.30",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "pkgroll": "^2.12.2",
