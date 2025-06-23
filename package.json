@@ -57,7 +57,7 @@
     "@types/node": "^22.15.32",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "pkgroll": "^2.13.0",
+    "pkgroll": "^2.13.1",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
