@@ -59,7 +59,7 @@
     "nano-staged": "^0.8.0",
     "pkgroll": "^2.15.4",
     "tsx": "^4.20.6",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=18.12.0",
