@@ -21,8 +21,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0
       pkgroll:
-        specifier: ^2.28.1
-        version: 2.28.1(typescript@5.9.3)
+        specifier: ^2.29.0
+        version: 2.29.0(typescript@5.9.3)
       tsx:
         specifier: ^4.23.15
         version: 4.23.15
@@ -413,9 +413,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jridgewell/sourcemap-codec@1.5.5':
-    resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
-
   '@jridgewell/sourcemap-codec@1.6.0':
     resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
@@ -630,9 +627,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@types/estree@1.0.8':
-    resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
-
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
@@ -771,8 +765,8 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
-  pkgroll@2.28.1:
-    resolution: {integrity: sha512-VZsvQZ68y7Z7VxO4am4dK1rfsqaSXDQEOpcx/aPcI1IgHanH1BDMKpyrlW4qjC/CNFvLE52+Mzy2HkyTOFXyPw==}
+  pkgroll@2.29.0:
+    resolution: {integrity: sha512-nTWWA9J9mClHnwzDonKtgpP3iZxWNHo6YH4Jo6BfsRNv54v35GtqNFVG6E+WrsSNLiWu8es6PyjSH/EiBDex1g==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -1050,8 +1044,6 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@jridgewell/sourcemap-codec@1.5.5': {}
-
   '@jridgewell/sourcemap-codec@1.6.0': {}
 
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
@@ -1113,7 +1105,7 @@ snapshots:
 
   '@rollup/pluginutils@5.3.0(rollup@4.63.4)':
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.9
       estree-walker: 2.0.2
       picomatch: 4.0.2
     optionalDependencies:
@@ -1193,8 +1185,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.63.4':
     optional: true
-
-  '@types/estree@1.0.8': {}
 
   '@types/estree@1.0.9': {}
 
@@ -1329,11 +1319,11 @@ snapshots:
 
   is-reference@1.2.1:
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.9
 
   magic-string@0.30.21:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   magic-string@1.4.1:
     dependencies:
@@ -1358,7 +1348,7 @@ snapshots:
 
   picomatch@4.0.2: {}
 
-  pkgroll@2.28.1(typescript@5.9.3):
+  pkgroll@2.29.0(typescript@5.9.3):
     dependencies:
       '@rollup/plugin-alias': 6.0.0(rollup@4.63.4)
       '@rollup/plugin-commonjs': 29.0.3(rollup@4.63.4)
